@@ -1,0 +1,3 @@
+E:/meshSiplification/build/_deps/libigl_imgui_fonts-subbuild/CMakeFiles/libigl_imgui_fonts-populate.dir
+E:/meshSiplification/build/_deps/libigl_imgui_fonts-subbuild/CMakeFiles/ALL_BUILD.dir
+E:/meshSiplification/build/_deps/libigl_imgui_fonts-subbuild/CMakeFiles/ZERO_CHECK.dir

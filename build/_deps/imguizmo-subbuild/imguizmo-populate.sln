@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{38951F6F-D137-35FE-9D7A-A86535AB261C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C47F933D-22FB-31AE-AB22-4D30DEDEAB2D} = {C47F933D-22FB-31AE-AB22-4D30DEDEAB2D}
+		{A013BF2A-D35A-3488-924A-02996E76CFF3} = {A013BF2A-D35A-3488-924A-02996E76CFF3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{C47F933D-22FB-31AE-AB22-4D30DEDEAB2D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imguizmo-populate", "imguizmo-populate.vcxproj", "{A013BF2A-D35A-3488-924A-02996E76CFF3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C47F933D-22FB-31AE-AB22-4D30DEDEAB2D} = {C47F933D-22FB-31AE-AB22-4D30DEDEAB2D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38951F6F-D137-35FE-9D7A-A86535AB261C}.Debug|x64.ActiveCfg = Debug|x64
+		{C47F933D-22FB-31AE-AB22-4D30DEDEAB2D}.Debug|x64.ActiveCfg = Debug|x64
+		{C47F933D-22FB-31AE-AB22-4D30DEDEAB2D}.Debug|x64.Build.0 = Debug|x64
+		{A013BF2A-D35A-3488-924A-02996E76CFF3}.Debug|x64.ActiveCfg = Debug|x64
+		{A013BF2A-D35A-3488-924A-02996E76CFF3}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61859028-B30F-3CC8-B1B2-9BB29E270DD2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

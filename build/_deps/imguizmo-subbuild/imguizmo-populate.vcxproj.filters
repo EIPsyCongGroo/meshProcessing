@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\62d2522ed73f8f9f410d0356f945654d\imguizmo-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\003393ec14f56a0cc9f62c47ae033572\imguizmo-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\9f699cf875feb08bbdf4b4bdd232176d\imguizmo-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\meshSiplification\build\_deps\imguizmo-subbuild\CMakeFiles\imguizmo-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0D318B0B-2F28-31CA-83A3-C0B6B0FB0F13}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

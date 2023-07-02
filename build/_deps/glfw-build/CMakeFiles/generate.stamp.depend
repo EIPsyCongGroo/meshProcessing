@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+D:/CMake/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+D:/CMake/share/cmake-3.24/Modules/CMakeDependentOption.cmake
+D:/CMake/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake
+D:/CMake/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake
+D:/CMake/share/cmake-3.24/Modules/CheckIncludeFile.cmake
+D:/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake
+D:/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake
+D:/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake
+D:/CMake/share/cmake-3.24/Modules/FindThreads.cmake
+D:/CMake/share/cmake-3.24/Modules/GNUInstallDirs.cmake
+D:/CMake/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake
+E:/meshSiplification/build/_deps/glfw-src/CMake/glfw3.pc.in
+E:/meshSiplification/build/_deps/glfw-src/CMake/glfw3Config.cmake.in
+E:/meshSiplification/build/_deps/glfw-src/CMakeLists.txt

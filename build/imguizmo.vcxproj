@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E3CD23F5-C81E-31EF-803F-4B1FE0A4D8AA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>imguizmo</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\meshSiplification\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">imguizmo.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">imguizmo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\meshSiplification\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">imguizmo.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">imguizmo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\meshSiplification\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">imguizmo.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">imguizmo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\meshSiplification\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">imguizmo.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">imguizmo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\glad-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\meshSiplification\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/meshSiplification/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/meshSiplification/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/meshSiplification/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/meshSiplification/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\meshSiplification\build\_deps\imguizmo-src\ImGuizmo.h" />
+    <ClCompile Include="E:\meshSiplification\build\_deps\imguizmo-src\ImGuizmo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\meshSiplification\build\ZERO_CHECK.vcxproj">
+      <Project>{C026C9FE-CDCE-38D5-9134-B6BCF1C5A363}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\meshSiplification\build\_deps\glad-build\glad.vcxproj">
+      <Project>{E742F02D-6CC6-3F12-8091-802465E760AD}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\meshSiplification\build\_deps\glfw-build\src\glfw.vcxproj">
+      <Project>{AA86ACB0-1452-359A-9137-E18E9E679626}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\meshSiplification\build\imgui.vcxproj">
+      <Project>{9ED7CB39-2F8E-3B0C-B609-92D857C2F4D2}</Project>
+      <Name>imgui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

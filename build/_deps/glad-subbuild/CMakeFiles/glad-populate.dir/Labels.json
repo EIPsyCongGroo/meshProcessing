@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/glad-populate"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/cf6d4c8ca4e33b4df524a97fe155fcbe/glad-populate.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/6d9b39fec8c2d3151a8ca1b8fa133a02/glad-populate-complete.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-build.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-configure.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-download.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-install.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-mkdir.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-patch.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-test.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/d60ceb52ded49da058810e9cf07d919b/glad-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glad-populate"
+		],
+		"name" : "glad-populate"
+	}
+}

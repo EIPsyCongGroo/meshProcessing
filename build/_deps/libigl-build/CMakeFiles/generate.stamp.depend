@@ -1,0 +1,24 @@
+# CMake generation dependency list for this directory.
+D:/CMake/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake
+D:/CMake/share/cmake-3.24/Modules/CheckIncludeFile.cmake
+D:/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake
+D:/CMake/share/cmake-3.24/Modules/FetchContent.cmake
+D:/CMake/share/cmake-3.24/Modules/FetchContent/CMakeLists.cmake.in
+D:/CMake/share/cmake-3.24/Modules/FindGit.cmake
+D:/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake
+D:/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake
+D:/CMake/share/cmake-3.24/Modules/FindThreads.cmake
+D:/CMake/share/cmake-3.24/Modules/GNUInstallDirs.cmake
+D:/CMake/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake
+E:/meshSiplification/build/_deps/libigl-src/CMakeLists.txt
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_add_library.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_add_test.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_add_tutorial.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_copy_dll.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_include.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_install.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_target_sources.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/igl_windows.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/igl/modules/core.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/libigl.cmake
+E:/meshSiplification/build/_deps/libigl-src/cmake/recipes/external/eigen.cmake

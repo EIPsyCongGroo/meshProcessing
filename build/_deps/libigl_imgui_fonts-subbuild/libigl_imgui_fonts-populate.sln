@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{7F66189B-7BD5-3311-9B10-D0D460552572}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23D86AD3-B631-34B4-87D8-5A14F282EFB8} = {23D86AD3-B631-34B4-87D8-5A14F282EFB8}
+		{C13208F7-E4DC-3F7E-AE53-5DB64838C1C8} = {C13208F7-E4DC-3F7E-AE53-5DB64838C1C8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{23D86AD3-B631-34B4-87D8-5A14F282EFB8}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libigl_imgui_fonts-populate", "libigl_imgui_fonts-populate.vcxproj", "{C13208F7-E4DC-3F7E-AE53-5DB64838C1C8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23D86AD3-B631-34B4-87D8-5A14F282EFB8} = {23D86AD3-B631-34B4-87D8-5A14F282EFB8}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F66189B-7BD5-3311-9B10-D0D460552572}.Debug|x64.ActiveCfg = Debug|x64
+		{23D86AD3-B631-34B4-87D8-5A14F282EFB8}.Debug|x64.ActiveCfg = Debug|x64
+		{23D86AD3-B631-34B4-87D8-5A14F282EFB8}.Debug|x64.Build.0 = Debug|x64
+		{C13208F7-E4DC-3F7E-AE53-5DB64838C1C8}.Debug|x64.ActiveCfg = Debug|x64
+		{C13208F7-E4DC-3F7E-AE53-5DB64838C1C8}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AFDFE41-B1AB-3BE6-82DC-A28DF9EAFAB9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

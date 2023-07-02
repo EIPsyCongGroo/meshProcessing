@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\meshSiplification\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\MeshGL.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\ViewerCore.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\ViewerData.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\bind_vertex_attrib_array.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_index_vbo.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_mesh_vbo.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_shader_program.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_vector_vbo.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\destroy_shader_program.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\gl.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\gl_type_size.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\init_render_to_texture.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\load_shader.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\print_program_info_log.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\print_shader_info_log.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\report_gl_error.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\uniform_type_to_string.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\verasansmono_compressed.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\vertex_array.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\MeshGL.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\ViewerCore.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\ViewerData.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\bind_vertex_attrib_array.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_index_vbo.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_mesh_vbo.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_shader_program.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\create_vector_vbo.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\destroy_shader_program.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\gl_type_size.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\init_render_to_texture.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\load_shader.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\print_program_info_log.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\print_shader_info_log.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\report_gl_error.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\uniform_type_to_string.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\verasansmono_compressed.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\vertex_array.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E5085676-C6DD-3C3E-948F-95B53E4809D2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E2A4121F-D3B0-30CE-96C8-DAFB1C667BC1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

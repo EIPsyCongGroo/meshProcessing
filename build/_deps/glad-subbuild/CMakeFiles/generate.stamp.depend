@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+D:/CMake/share/cmake-3.24/Modules/CMakeGenericSystem.cmake
+D:/CMake/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake
+D:/CMake/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake
+D:/CMake/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake
+D:/CMake/share/cmake-3.24/Modules/ExternalProject.cmake
+D:/CMake/share/cmake-3.24/Modules/ExternalProject/RepositoryInfo.txt.in
+D:/CMake/share/cmake-3.24/Modules/ExternalProject/cfgcmd.txt.in
+D:/CMake/share/cmake-3.24/Modules/ExternalProject/gitclone.cmake.in
+D:/CMake/share/cmake-3.24/Modules/ExternalProject/gitupdate.cmake.in
+D:/CMake/share/cmake-3.24/Modules/ExternalProject/mkdirs.cmake.in
+D:/CMake/share/cmake-3.24/Modules/Platform/Windows.cmake
+D:/CMake/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake
+E:/meshSiplification/build/_deps/glad-subbuild/CMakeFiles/3.24.2/CMakeSystem.cmake
+E:/meshSiplification/build/_deps/glad-subbuild/CMakeLists.txt
+E:/meshSiplification/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-mkdirs.cmake

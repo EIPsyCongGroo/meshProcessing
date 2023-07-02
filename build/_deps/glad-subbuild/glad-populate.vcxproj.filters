@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\d60ceb52ded49da058810e9cf07d919b\glad-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\6d9b39fec8c2d3151a8ca1b8fa133a02\glad-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\cf6d4c8ca4e33b4df524a97fe155fcbe\glad-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\meshSiplification\build\_deps\glad-subbuild\CMakeFiles\glad-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3417A6FA-2E6C-377F-9F5D-BBEE0F697FA9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

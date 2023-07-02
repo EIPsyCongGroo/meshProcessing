@@ -1,0 +1,1876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A217D71D-14A2-3772-A2E8-126B0F5CD5C9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>igl_core</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" />
+  <ItemGroup>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl-src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/meshSiplification/build/_deps/libigl-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/_deps/libigl-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_library.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_test.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_tutorial.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_copy_dll.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_include.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_install.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_target_sources.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_windows.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\core.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\libigl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\eigen.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\meshSiplification\build\_deps\libigl-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/meshSiplification/build/_deps/libigl-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/_deps/libigl-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_library.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_test.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_tutorial.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_copy_dll.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_include.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_install.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_target_sources.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_windows.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\core.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\libigl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\eigen.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\meshSiplification\build\_deps\libigl-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/meshSiplification/build/_deps/libigl-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/_deps/libigl-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_library.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_test.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_tutorial.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_copy_dll.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_include.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_install.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_target_sources.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_windows.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\core.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\libigl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\eigen.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\meshSiplification\build\_deps\libigl-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/meshSiplification/build/_deps/libigl-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\CMake\bin\cmake.exe -SE:/meshSiplification -BE:/meshSiplification/build --check-stamp-file E:/meshSiplification/build/_deps/libigl-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;D:\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;D:\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\FindThreads.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_library.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_test.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_add_tutorial.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_copy_dll.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_include.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_install.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_target_sources.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\igl_windows.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\core.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\libigl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\eigen.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\meshSiplification\build\_deps\libigl-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\AABB.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ARAPEnergyType.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\AtA_cached.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\C_STR.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\Camera.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\EPS.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\FastWindingNumberForSoups.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\FileEncoding.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\FileMemoryStream.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\HalfEdgeIterator.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\Hit.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\IndexComparison.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\LinSpaced.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\MappingEnergyType.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\MeshBooleanType.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\MshLoader.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\MshSaver.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\NormalType.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ONE.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\PI.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\REDRUM.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\STR.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\SolverStatus.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\SortableRow.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\Timer.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\Viewport.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\WindingNumberAABB.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\WindingNumberMethod.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\WindingNumberTree.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ZERO.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\accumarray.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\active_set.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\adjacency_list.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\adjacency_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\all.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\all_pairs_distances.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ambient_occlusion.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\angular_distance.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\any.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\any_of.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap_dof.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap_linear_block.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap_rhs.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\average_from_edges_onto_vertices.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\average_onto_faces.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\average_onto_vertices.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\avg_edge_length.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\axis_angle_to_quat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\barycenter.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\barycentric_coordinates.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\barycentric_interpolation.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\basename.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bbw.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bezier.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bfs.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bfs_orient.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\biharmonic_coordinates.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bijective_composite_harmonic_mapping.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\blkdiag.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\blue_noise.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bone_parents.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\boundary_conditions.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\boundary_facets.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\boundary_loop.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bounding_box.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bounding_box_diagonal.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\canonical_quaternions.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ceil.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\centroid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\circulation.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\circumradius.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\collapse_edge.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\collapse_small_triangles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\colon.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\colormap.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\column_to_quats.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\columnize.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\comb_cross_field.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\comb_frame_field.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\comb_line_field.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\combine.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\compute_frame_field_bisectors.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\connect_boundary_to_infinity.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\connected_components.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cotmatrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cotmatrix_entries.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cotmatrix_intrinsic.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\count.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\covariance_scatter_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cr_vector_curvature_correction.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cr_vector_laplacian.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cr_vector_mass.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cross.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cross_field_mismatch.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\crouzeix_raviart_cotmatrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\crouzeix_raviart_massmatrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cumprod.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cumsum.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\curved_hessian_energy.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cut_mesh.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cut_mesh_from_singularities.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cut_to_disk.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cylinder.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dated_copy.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\decimate.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\decimate_callback_types.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\decimate_trivial_callbacks.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\default_num_threads.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\deform_skeleton.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\delaunay_triangulation.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\deprecated.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dfs.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\diag.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dihedral_angles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dijkstra.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\direct_delta_mush.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\directed_edge_orientations.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\directed_edge_parents.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dirname.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dot.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dot_row.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\doublearea.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dqs.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dual_contouring.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ears.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_collapse_is_valid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_exists_near.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_flaps.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_lengths.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_midpoints.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_topology.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_vectors.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edges.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edges_to_path.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\eigs.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\euler_characteristic.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\exact_geodesic.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\example_fun.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\exploded_view.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\extension.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\exterior_edges.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\extract_manifold_patches.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\extract_non_manifold_edge_curves.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\face_areas.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\face_occurrences.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\faces_first.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\facet_adjacency_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\facet_components.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\false_barycentric_subdivision.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fast_winding_number.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_contents_as_string.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_dialog_open.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_dialog_save.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_exists.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\find.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\find_cross_field_singularities.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\find_zero.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fit_cubic_bezier.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fit_plane.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fit_rotations.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flip_avoiding_line_search.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flip_edge.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flipped_triangles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flood_fill.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\floor.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\for_each.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\forward_kinematics.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\frame_field_deformer.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\frame_to_cross_field.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\frustum.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\gaussian_curvature.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\get_seconds.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\get_seconds_hires.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grad.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grad_intrinsic.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grid_search.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\group_sum_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\guess_extension.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\harmonic.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\harwell_boeing.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hausdorff.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\heat_geodesics.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hessian.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hessian_energy.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\histc.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hsv_to_rgb.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\igl_inline.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\in_element.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\infinite_cost_stopping_condition.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\inradius.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\internal_angles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\intersect.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\intrinsic_delaunay_cotmatrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\intrinsic_delaunay_triangulation.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\invert_diag.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_border_vertex.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_boundary_edge.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_delaunay.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_dir.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_edge_manifold.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_file.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_intrinsic_delaunay.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_irregular_vertex.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_planar.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_readable.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_sparse.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_stl.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_symmetric.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_vertex_manifold.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_writable.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\isdiag.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ismember.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\isolines.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\isolines_map.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\iterative_closest_point.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\jet.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\kelvinlets.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\kkt_inverse.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\knn.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\launch_medit.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\lbs_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\lexicographic_triangulation.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\limit_faces.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\line_field_mismatch.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\line_search.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\line_segment_in_rectangle.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\linprog.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\list_to_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\local_basis.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\look_at.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\loop.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\lscm.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\map_vertices_to_circle.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mapping_energy_with_jacobians.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\march_cube.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\marching_cubes.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\marching_cubes_tables.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\marching_tets.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\massmatrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\massmatrix_intrinsic.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mat_max.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mat_min.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mat_to_quat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\material_colors.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\matlab_format.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\matrix_to_list.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\max.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\max_faces_stopping_condition.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\max_size.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\median.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_heap.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_quad_with_fixed.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_quad_with_fixed.impl.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_size.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mod.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mode.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mvc.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\nchoosek.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\next_filename.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normal_derivative.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normalize_quat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normalize_row_lengths.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normalize_row_sums.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\null.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\octree.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\offset_surface.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\on_boundary.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orient_halfedges.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orient_outward.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orientable_patches.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\oriented_facets.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orth.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ortho.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\outer_element.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\parallel_for.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\parallel_transport_angles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\partition.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\parula.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\path_to_edges.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\path_to_executable.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pathinfo.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_corner_normals.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_edge_normals.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_face_normals.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_vertex_attribute_smoothing.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_vertex_normals.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_vertex_point_to_plane_quadrics.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\piecewise_constant_winding_number.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pinv.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\planarize_quad_mesh.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\point_in_circle.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\point_mesh_squared_distance.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\point_simplex_squared_distance.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polar_dec.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polar_svd.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polar_svd3x3.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polygon_corners.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polygons_to_triangles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\principal_curvature.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\print_ijv.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\print_vector.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\procrustes.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project_isometrically_to_plane.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project_to_line.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project_to_line_segment.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\projection_constraint.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pseudonormal_test.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pso.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\qslim.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\qslim_optimal_collapse_edge_callbacks.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quad_grid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quad_planarity.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quadprog.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quadric_binary_plus_operator.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_conjugate.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_mult.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_to_axis_angle.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_to_mat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quats_to_column.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ramer_douglas_peucker.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_dir.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_points_on_mesh.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_quaternion.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_search.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\randperm.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ray_box_intersect.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ray_mesh_intersect.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ray_sphere_intersect.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readBF.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readCSV.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readDMAT.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readMESH.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readMSH.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readNODE.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readOBJ.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readOFF.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readPLY.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readSTL.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readTGF.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readWRL.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\read_file_binary.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\read_triangle_mesh.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\redux.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\remesh_along_isoline.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\remove_duplicate_vertices.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\remove_unreferenced.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\reorder.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\repdiag.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\repmat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\resolve_duplicated_faces.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rgb_to_hsv.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rigid_alignment.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rotate_by_quat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rotate_vectors.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rotation_matrix_from_directions.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\round.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rows_to_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sample_edges.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\scalar_to_cr_vector_gradient.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\screen_space_selection.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\seam_edges.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\segment_segment_intersect.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\serialize.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\setdiff.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\setunion.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\setxor.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\shape_diameter_function.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\shapeup.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sharp_edges.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\shortest_edge_and_midpoint.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\signed_angle.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\signed_distance.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\simplify_polyhedron.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_cached.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_into.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_mask.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_sorted.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slim.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\smooth_corner_adjacency.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\snap_points.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\snap_to_canonical_view_quat.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\snap_to_fixed_up.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\solid_angle.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort_angles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort_triangles.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort_vectors_ccw.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sortrows.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sparse.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sparse_cached.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sparse_voxel_grid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\speye.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\squared_edge_lengths.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\stdin_to_temp.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\straighten_seams.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\string_utils.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sum.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\svd3x3.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\svd3x3_avx.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\svd3x3_sse.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\swept_volume.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\swept_volume_bounding_box.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\swept_volume_signed_distance.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tan_half_angle.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tet_tet_adjacency.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tetrahedralized_grid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tinyply.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\topological_hole_fill.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\trackball.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\transpose_blocks.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangle_fan.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangle_triangle_adjacency.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangles_from_strip.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangulated_grid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\two_axis_valuator_fixed_up.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\uniformly_sample_two_manifold.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique_edge_map.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique_rows.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique_simplices.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_in_mesh.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_on_line.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_on_plane.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_onto_mesh.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_ray.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unzip_corners.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\upsample.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\vector_area_matrix.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\verbose.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\vertex_components.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\vertex_triangle_adjacency.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\volume.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\voxel_grid.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\winding_number.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeBF.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeDMAT.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeMESH.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeMSH.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeOBJ.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeOFF.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writePLY.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeSTL.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeTGF.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeWRL.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\write_triangle_mesh.h">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\AABB.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\AtA_cached.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\EPS.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\HalfEdgeIterator.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\MshLoader.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\MshSaver.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\accumarray.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\active_set.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\adjacency_list.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\adjacency_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\all.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\all_pairs_distances.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ambient_occlusion.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\angular_distance.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\any.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\any_of.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap_dof.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap_linear_block.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\arap_rhs.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\average_from_edges_onto_vertices.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\average_onto_faces.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\average_onto_vertices.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\avg_edge_length.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\axis_angle_to_quat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\barycenter.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\barycentric_coordinates.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\barycentric_interpolation.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\basename.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bbw.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bezier.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bfs.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bfs_orient.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\biharmonic_coordinates.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bijective_composite_harmonic_mapping.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\blkdiag.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\blue_noise.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bone_parents.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\boundary_conditions.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\boundary_facets.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\boundary_loop.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bounding_box.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\bounding_box_diagonal.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\canonical_quaternions.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ceil.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\centroid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\circulation.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\circumradius.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\collapse_edge.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\collapse_small_triangles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\colon.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\colormap.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\column_to_quats.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\columnize.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\comb_cross_field.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\comb_frame_field.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\comb_line_field.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\combine.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\compute_frame_field_bisectors.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\connect_boundary_to_infinity.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\connected_components.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cotmatrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cotmatrix_entries.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cotmatrix_intrinsic.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\count.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\covariance_scatter_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cr_vector_curvature_correction.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cr_vector_laplacian.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cr_vector_mass.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cross.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cross_field_mismatch.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\crouzeix_raviart_cotmatrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\crouzeix_raviart_massmatrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cumprod.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cumsum.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\curved_hessian_energy.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cut_mesh.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cut_mesh_from_singularities.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cut_to_disk.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\cylinder.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dated_copy.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\decimate.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\decimate_trivial_callbacks.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\default_num_threads.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\deform_skeleton.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\delaunay_triangulation.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dfs.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\diag.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dihedral_angles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dijkstra.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\direct_delta_mush.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\directed_edge_orientations.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\directed_edge_parents.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dirname.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dot.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dot_row.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\doublearea.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dqs.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\dual_contouring.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ears.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_collapse_is_valid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_exists_near.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_flaps.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_lengths.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_midpoints.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_topology.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edge_vectors.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edges.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\edges_to_path.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\eigs.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\euler_characteristic.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\exact_geodesic.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\example_fun.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\exploded_view.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\extension.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\exterior_edges.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\extract_manifold_patches.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\extract_non_manifold_edge_curves.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\face_areas.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\face_occurrences.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\faces_first.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\facet_adjacency_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\facet_components.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\false_barycentric_subdivision.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fast_winding_number.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_contents_as_string.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_dialog_open.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_dialog_save.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\file_exists.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\find.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\find_cross_field_singularities.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\find_zero.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fit_cubic_bezier.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fit_plane.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\fit_rotations.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flip_avoiding_line_search.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flip_edge.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flipped_triangles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\flood_fill.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\floor.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\forward_kinematics.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\frame_field_deformer.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\frame_to_cross_field.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\frustum.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\gaussian_curvature.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\get_seconds.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\get_seconds_hires.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grad.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grad_intrinsic.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\grid_search.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\group_sum_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\guess_extension.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\harmonic.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\harwell_boeing.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hausdorff.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\heat_geodesics.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hessian.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hessian_energy.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\histc.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\hsv_to_rgb.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\in_element.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\infinite_cost_stopping_condition.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\inradius.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\internal_angles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\intersect.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\intrinsic_delaunay_cotmatrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\intrinsic_delaunay_triangulation.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\invert_diag.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_border_vertex.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_boundary_edge.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_delaunay.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_dir.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_edge_manifold.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_file.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_intrinsic_delaunay.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_irregular_vertex.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_planar.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_readable.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_sparse.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_stl.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_symmetric.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_vertex_manifold.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\is_writable.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\isdiag.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ismember.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\isolines.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\isolines_map.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\iterative_closest_point.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\jet.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\kelvinlets.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\kkt_inverse.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\knn.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\launch_medit.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\lbs_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\lexicographic_triangulation.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\limit_faces.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\line_field_mismatch.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\line_search.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\line_segment_in_rectangle.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\linprog.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\list_to_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\local_basis.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\look_at.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\loop.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\lscm.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\map_vertices_to_circle.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mapping_energy_with_jacobians.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\march_cube.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\marching_cubes.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\marching_tets.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\massmatrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\massmatrix_intrinsic.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mat_max.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mat_min.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mat_to_quat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\matlab_format.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\matrix_to_list.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\max.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\max_faces_stopping_condition.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\max_size.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\median.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_quad_with_fixed.1.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_quad_with_fixed.2.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_quad_with_fixed_precompute.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_quad_with_fixed_solve.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\min_size.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mod.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mode.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\mvc.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\nchoosek.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\next_filename.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normal_derivative.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normalize_quat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normalize_row_lengths.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\normalize_row_sums.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\null.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\octree.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\offset_surface.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\on_boundary.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orient_halfedges.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orient_outward.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orientable_patches.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\oriented_facets.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\orth.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ortho.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\outer_element.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\parallel_transport_angles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\partition.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\parula.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\path_to_edges.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\path_to_executable.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pathinfo.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_corner_normals.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_edge_normals.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_face_normals.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_vertex_attribute_smoothing.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_vertex_normals.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\per_vertex_point_to_plane_quadrics.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\piecewise_constant_winding_number.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pinv.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\planarize_quad_mesh.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\point_in_circle.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\point_mesh_squared_distance.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\point_simplex_squared_distance.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polar_dec.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polar_svd.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polar_svd3x3.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polygon_corners.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\polygons_to_triangles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\principal_curvature.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\print_ijv.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\print_vector.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\procrustes.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project_isometrically_to_plane.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project_to_line.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\project_to_line_segment.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\projection_constraint.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pseudonormal_test.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\pso.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\qslim.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\qslim_optimal_collapse_edge_callbacks.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quad_grid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quad_planarity.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quadprog.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quadric_binary_plus_operator.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_conjugate.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_mult.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_to_axis_angle.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quat_to_mat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\quats_to_column.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ramer_douglas_peucker.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_dir.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_points_on_mesh.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_quaternion.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\random_search.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\randperm.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ray_box_intersect.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ray_mesh_intersect.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\ray_sphere_intersect.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readBF.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readCSV.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readDMAT.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readMESH.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readMSH.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readNODE.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readOBJ.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readOFF.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readPLY.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readSTL.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readTGF.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\readWRL.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\read_file_binary.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\read_triangle_mesh.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\remesh_along_isoline.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\remove_duplicate_vertices.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\remove_unreferenced.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\reorder.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\repdiag.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\repmat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\resolve_duplicated_faces.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rgb_to_hsv.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rigid_alignment.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rotate_by_quat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rotate_vectors.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rotation_matrix_from_directions.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\round.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\rows_to_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sample_edges.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\scalar_to_cr_vector_gradient.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\screen_space_selection.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\seam_edges.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\segment_segment_intersect.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\setdiff.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\setunion.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\setxor.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\shape_diameter_function.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\shapeup.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sharp_edges.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\shortest_edge_and_midpoint.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\signed_angle.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\signed_distance.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\simplify_polyhedron.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_cached.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_into.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_mask.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slice_sorted.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\slim.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\smooth_corner_adjacency.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\snap_points.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\snap_to_canonical_view_quat.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\snap_to_fixed_up.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\solid_angle.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort_angles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort_triangles.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sort_vectors_ccw.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sortrows.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sparse.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sparse_cached.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sparse_voxel_grid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\speye.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\squared_edge_lengths.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\stdin_to_temp.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\straighten_seams.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\string_utils.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\sum.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\svd3x3.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\svd3x3_avx.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\svd3x3_sse.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\swept_volume.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\swept_volume_bounding_box.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\swept_volume_signed_distance.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tan_half_angle.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tet_tet_adjacency.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tetrahedralized_grid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\tinyply.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\topological_hole_fill.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\trackball.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\transpose_blocks.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangle_fan.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangle_triangle_adjacency.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangles_from_strip.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\triangulated_grid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\two_axis_valuator_fixed_up.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\uniformly_sample_two_manifold.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique_edge_map.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique_rows.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unique_simplices.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_in_mesh.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_on_line.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_on_plane.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_onto_mesh.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unproject_ray.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\unzip_corners.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\upsample.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\vector_area_matrix.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\vertex_components.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\vertex_triangle_adjacency.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\volume.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\voxel_grid.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\winding_number.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeBF.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeDMAT.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeMESH.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeMSH.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeOBJ.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeOFF.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writePLY.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeSTL.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeTGF.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\writeWRL.cpp">
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\write_triangle_mesh.cpp">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\meshSiplification\build\ZERO_CHECK.vcxproj">
+      <Project>{C026C9FE-CDCE-38D5-9134-B6BCF1C5A363}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

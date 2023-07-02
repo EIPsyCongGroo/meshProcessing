@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{ECAC3038-FBD9-3892-9964-34EC22B7EB82}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55DB635A-BE29-390D-AFC4-21DDFFF86C46} = {55DB635A-BE29-390D-AFC4-21DDFFF86C46}
+		{8860526F-84A0-3DC6-AD7A-184523919175} = {8860526F-84A0-3DC6-AD7A-184523919175}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{55DB635A-BE29-390D-AFC4-21DDFFF86C46}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imgui-populate", "imgui-populate.vcxproj", "{8860526F-84A0-3DC6-AD7A-184523919175}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55DB635A-BE29-390D-AFC4-21DDFFF86C46} = {55DB635A-BE29-390D-AFC4-21DDFFF86C46}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECAC3038-FBD9-3892-9964-34EC22B7EB82}.Debug|x64.ActiveCfg = Debug|x64
+		{55DB635A-BE29-390D-AFC4-21DDFFF86C46}.Debug|x64.ActiveCfg = Debug|x64
+		{55DB635A-BE29-390D-AFC4-21DDFFF86C46}.Debug|x64.Build.0 = Debug|x64
+		{8860526F-84A0-3DC6-AD7A-184523919175}.Debug|x64.ActiveCfg = Debug|x64
+		{8860526F-84A0-3DC6-AD7A-184523919175}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EC7DAC5-3022-3909-B801-B6F3798391FD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

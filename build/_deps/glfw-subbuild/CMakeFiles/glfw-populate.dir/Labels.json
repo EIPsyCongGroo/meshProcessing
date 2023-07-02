@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/c5883c92aea45f4fd8b37e14d13894e7/glfw-populate.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/df448a9859c8823467f8629234479843/glfw-populate-complete.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-build.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-configure.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-download.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-install.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-mkdir.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-patch.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-test.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/glfw-subbuild/CMakeFiles/707e42886819032e15cc200f84d26573/glfw-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glfw-populate"
+		],
+		"name" : "glfw-populate"
+	}
+}

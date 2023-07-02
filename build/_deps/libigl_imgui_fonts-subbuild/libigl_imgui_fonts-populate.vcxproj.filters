@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\f3c21b7a05f807c1b3ce15e86f2712fc\libigl_imgui_fonts-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\e8c228709216a2da1d9a32cfe07192e9\libigl_imgui_fonts-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\cbfef5bdfe443ca94ca7fc9f3759c126\libigl_imgui_fonts-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\meshSiplification\build\_deps\libigl_imgui_fonts-subbuild\CMakeFiles\libigl_imgui_fonts-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{02F457A7-CE5A-376D-9A6C-AF9123501627}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

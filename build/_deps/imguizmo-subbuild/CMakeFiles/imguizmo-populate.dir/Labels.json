@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/imguizmo-populate"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/9f699cf875feb08bbdf4b4bdd232176d/imguizmo-populate.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/003393ec14f56a0cc9f62c47ae033572/imguizmo-populate-complete.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-build.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-configure.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-download.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-install.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-mkdir.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-patch.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-test.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/build/_deps/imguizmo-subbuild/CMakeFiles/62d2522ed73f8f9f410d0356f945654d/imguizmo-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"imguizmo-populate"
+		],
+		"name" : "imguizmo-populate"
+	}
+}

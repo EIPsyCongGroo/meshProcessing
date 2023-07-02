@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\meshSiplification\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\glfw\Viewer.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\glfw\ViewerPlugin.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\glfw\background_window.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\glfw\map_texture.h">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\glfw\Viewer.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\glfw\background_window.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="E:\meshSiplification\build\_deps\libigl-src\include\igl\opengl\glfw\map_texture.cpp">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E5085676-C6DD-3C3E-948F-95B53E4809D2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E2A4121F-D3B0-30CE-96C8-DAFB1C667BC1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

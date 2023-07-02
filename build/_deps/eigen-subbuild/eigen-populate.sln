@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{AC86B0DD-4F20-36DF-9A99-180A1DE8034B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CBA7D024-BF33-3D7D-A136-F6EEFB81A2B7} = {CBA7D024-BF33-3D7D-A136-F6EEFB81A2B7}
+		{9810557F-D207-3060-AB5A-30180BD1F2F3} = {9810557F-D207-3060-AB5A-30180BD1F2F3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{CBA7D024-BF33-3D7D-A136-F6EEFB81A2B7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eigen-populate", "eigen-populate.vcxproj", "{9810557F-D207-3060-AB5A-30180BD1F2F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CBA7D024-BF33-3D7D-A136-F6EEFB81A2B7} = {CBA7D024-BF33-3D7D-A136-F6EEFB81A2B7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC86B0DD-4F20-36DF-9A99-180A1DE8034B}.Debug|x64.ActiveCfg = Debug|x64
+		{CBA7D024-BF33-3D7D-A136-F6EEFB81A2B7}.Debug|x64.ActiveCfg = Debug|x64
+		{CBA7D024-BF33-3D7D-A136-F6EEFB81A2B7}.Debug|x64.Build.0 = Debug|x64
+		{9810557F-D207-3060-AB5A-30180BD1F2F3}.Debug|x64.ActiveCfg = Debug|x64
+		{9810557F-D207-3060-AB5A-30180BD1F2F3}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {964A5DCF-D797-31BA-8CF3-B6E7329E6896}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
