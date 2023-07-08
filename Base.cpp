@@ -114,3 +114,41 @@ Eigen::VectorXd calc_Gaussian_Curvature(MyMesh& mesh)
     }
     return ret;
 }
+Eigen::MatrixXd get_texture(std::string infile)
+{
+    // Open the obj file for reading
+    std::ifstream file(infile);
+    if (!file)
+    {
+        std::cerr << "Failed to open file!" << std::endl;
+
+    }
+
+    // Read all vt lines into a vector of Vector2f
+    std::vector<Vector2d> texcoords;
+    std::string line;
+    
+    while (std::getline(file, line))
+    {
+
+        if (line.substr(0, 3) == "vt ")
+        {
+            std::istringstream iss(line.substr(3));
+            Vector2d texcoord;
+            iss >> texcoord[0] >> texcoord[1];
+            texcoords.push_back(texcoord);
+        }
+    }
+
+    
+
+    // Convert the vector to an Eigen matrix
+    MatrixXd texcoord_matrix(texcoords.size(), 2);
+    for (int i = 0; i < texcoords.size(); ++i)
+    {
+        texcoord_matrix.row(i) = texcoords[i];
+    }
+
+    //std::cout << "Texture coordinates:" << std::endl << texcoord_matrix << std::endl;
+    return texcoord_matrix;
+}

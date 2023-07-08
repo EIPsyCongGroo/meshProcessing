@@ -6,15 +6,15 @@
 struct edge_Collapse_structure
 {
     MyMesh::HalfedgeHandle hf;
-    MyMesh::Point np;
+    Eigen::Vector<double, 5> np;
     MyMesh::VertexHandle vto;
     MyMesh::VertexHandle vfrom;
     //下面两个用来判断该点对是否已被更新过的点对取代
     int vto_flag = 0;
     int vfrom_flag = 0;
-    Eigen::Matrix4d Q_new;
+    Eigen::Matrix<double, 6, 6> Q_new;
     float k;
-    float cost;
+    double cost;
     bool operator<(const edge_Collapse_structure& a) const
     {
         return  a.cost < cost;
@@ -42,7 +42,7 @@ struct edge_Collapse_structure
 };
 
 // t is a threshold parameter
-void Surface_Simplification(MyMesh& mesh, float ratio, float alfa);
+Eigen::MatrixXd Surface_Simplification(MyMesh& mesh, float ratio, Eigen::MatrixXd uv);
 
 
 

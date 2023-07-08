@@ -326,6 +326,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="E:\meshSiplification\remesh.cpp" />
     <ClCompile Include="E:\meshSiplification\simplify.cpp" />
     <ClInclude Include="E:\meshSiplification\Base.h" />
+    <ClInclude Include="E:\meshSiplification\gettexure.hpp" />
     <ClInclude Include="E:\meshSiplification\remesh.h" />
     <ClInclude Include="E:\meshSiplification\simplify.h" />
     <Natvis Include="E:\meshSiplification\build\_deps\eigen-src\debug\msvc\eigen.natvis">

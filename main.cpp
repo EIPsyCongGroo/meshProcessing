@@ -6,15 +6,22 @@
 #include <igl/opengl/glfw/Viewer.h>
 #include <igl/opengl/glfw/imgui/ImGuiPlugin.h>
 #include <igl/opengl/glfw/imgui/ImGuiMenu.h>
-#include <igl/opengl/glfw/imgui/ImGuiHelpers.h>
+//#include <igl/opengl/glfw/imgui/ImGuiHelpers.h>
+#include <igl/png/readPNG.h>
+#include <igl/png/texture_from_png.h>
+
+
+#include<fstream>
 #include "Base.h"
 #include "simplify.h"
 #include "remesh.h"
 
+
 typedef OpenMesh::TriMesh_ArrayKernelT<> MyMesh;
 const int cache_size = 12;
-Eigen::MatrixXd V[cache_size];
+Eigen::MatrixXd V[cache_size], uv_coords[cache_size];
 Eigen::MatrixXi F[cache_size];
+
 bool flag[cache_size] = { false };
 MyMesh mesh;
 double TargetLength = 0.008;
@@ -29,7 +36,7 @@ bool key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifier
         {
             if (!flag[ti])
             {
-                Surface_Simplification(mesh, 0.5, alfa);
+                Surface_Simplification(mesh, 0.5, uv_coords[0]);
                 std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
                 std::cout << "faces : " << mesh.n_faces() << std::endl;;
                 openMesh_to_igl(mesh, V[ti], F[ti]);
@@ -59,27 +66,39 @@ int main(int argc, char* argv[])
 {
 
     OpenMesh::VPropHandleT< double > test;
+
+    OpenMesh::IO::Options opt = 0x0040;
+
+
+    //std::string fname = "./Release/OBJ/Tile_+005_+008_L20_0uuuu00.obj";
+    std::string fname = "E:\\Assignment3\\Code\\models\\spot\\spot_triangulated_good.obj";
+    std::string file = argc > 1 ? argv[1] : fname;
+    
+    OpenMesh::IO::read_mesh(mesh, file, opt);
+
+    
     mesh.add_property(test);
     mesh.request_vertex_normals();
     mesh.request_face_normals();
-
     mesh.request_vertex_texcoords2D();
-    OpenMesh::IO::Options opt = OpenMesh::IO::Options::VertexTexCoord;
-    std::string fname = "../models/bunny.obj";
-    if (!(argv[1]))
+    if (mesh.has_vertex_texcoords2D())
     {
-        OpenMesh::IO::read_mesh(mesh, fname, opt);
+        std::cerr << "Has_vertex_texcoords" << "\n";
+        uv_coords[0] = get_texture(file);
     }
-    else
+
+    size_t lastdot = file.rfind('.');
+    std::string texture_file = file.substr(0, (lastdot)) + "_1.jpg";
+    std::ifstream mtlfile(texture_file);
+    if (!mtlfile.is_open())
     {
-        OpenMesh::IO::read_mesh(mesh, argv[1], opt);
+        std::cerr << "Error: Cannot open file " << texture_file << std::endl;
     }
-    for (MyMesh::VertexIter v_it = mesh.vertices_begin(); v_it != mesh.vertices_end(); ++v_it)
-    {
-        mesh.point(*v_it) /= 4.0;
-    }
-    mesh.update_face_normals();
-    mesh.update_vertex_normals();
+    
+
+    /*mesh.update_face_normals();
+    mesh.update_vertex_normals();*/
+   
     igl::opengl::glfw::Viewer viewer;
     viewer.callback_key_down = &key_down;
     openMesh_to_igl(mesh, V[0], F[0]);
@@ -92,8 +111,6 @@ int main(int argc, char* argv[])
     igl::opengl::glfw::imgui::ImGuiMenu menu;
     plugin.widgets.push_back(&menu);
 
-    // Customize the menu
-    double doubleVariable = 0.1f; // Shared between two menus
 
     // Add content to the default menu window
     menu.callback_draw_viewer_menu = [&]()
@@ -177,73 +194,47 @@ int main(int argc, char* argv[])
                 }
             }
 
-            //if (ImGui::Button("CatmullClark", ImVec2(-1, 0)))
-            //{
+            if (ImGui::Button("setTexture", ImVec2(-1, 0)))
+            {
 
-            //    OpenMesh::Subdivider::Uniform::CatmullClarkT<MyMesh> catmull;;
+                viewer.data().set_uv(uv_coords[0]);
+                /*size_t last_dot = file.rfind('.');
+                std::string mtlpath = file.substr(0, (last_dot)) + ".mtl";
 
-            //    if (ti < cache_size)
-            //    {
-            //        if (!flag[ti])
-            //        {
-            //            // Execute  subdivision steps
-            //            catmull.attach(mesh);
-            //            catmull(1);
-            //            catmull.detach();
-            //            std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
-            //            std::cout << "faces : " << mesh.n_faces() << std::endl;;
-            //            openMesh_to_igl(mesh, V[ti], F[ti]);
-            //            flag[ti] = true;
-            //        }
-            //        viewer.data().clear();
-            //        viewer.data().set_mesh(V[ti], F[ti]);
-            //        viewer.core().align_camera_center(V[ti], F[ti]);
-            //        ti++;
-            //    }
-            //}
+                std::ifstream mtlfile(mtlpath);
+                std::string imgpath;
+                std::string line;
+                if (!mtlfile.is_open())
+                {
+                    std::cerr << "Error: Cannot open file " << mtlpath << std::endl;
+                }
+                while (std::getline(mtlfile, line))
+                {
+                    if (line.substr(0, 9) == "   map_Kd")
+                    {
+                        imgpath = line.substr(10);
+                        std::cout << imgpath << "\n";
+                    }
+                }*/
 
-            // Add a button
-            //if (ImGui::Button("Decimater", ImVec2(-1, 0)))
-            //{
+                Eigen::MatrixXd colors = Eigen::MatrixXd::Ones(viewer.data().V.rows(), 3);
+                viewer.data().set_colors(colors);
+                Eigen::Matrix<unsigned char, Eigen::Dynamic, Eigen::Dynamic> R, G, B, A;
+                igl::png::readPNG(mtlfile.is_open() ? texture_file:igl::file_dialog_open(), R, G, B, A);
+                viewer.data().set_mesh(V[0], F[0]);
+                viewer.data().set_texture(R, G, B, A);
+                viewer.data().show_texture = true;
+                viewer.data().show_lines = false;
+            }
 
-            //    typedef OpenMesh::Decimater::DecimaterT< MyMesh >     Decimater;
-            //    typedef OpenMesh::Decimater::ModQuadricT<MyMesh>::Handle HModQuadric;
 
-
-            //    if (ti < cache_size)
-            //    {
-            //        if (!flag[ti])
-            //        {
-
-            //            Decimater   decimater(mesh);  // a decimater object, connected to a mesh
-            //            HModQuadric hModQuadric;      // use a quadric module
-            //            decimater.add(hModQuadric); // register module at the decimater
-            //            // Execute  decimation steps
-            //            decimater.module(hModQuadric).unset_max_err();
-            //            decimater.initialize();       // let the decimater initialize the mesh and the
-            //            // modules
-            //            decimater.decimate();         // do decimation
-
-            //            std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
-            //            std::cout << "faces : " << mesh.n_faces() << std::endl;;
-            //            openMesh_to_igl(mesh, V[ti], F[ti]);
-            //            flag[ti] = true;
-            //        }
-            //        viewer.data().clear();
-            //        viewer.data().set_mesh(V[ti], F[ti]);
-            //        viewer.core().align_camera_center(V[ti], F[ti]);
-            //        ti++;
-            //    }
-            //}
-
-            ImGui::InputFloat("Curvature weight", &alfa, 0, 0, "%.4f");
             if (ImGui::Button("Simplify", ImVec2(-1, 0)))
             {
                 if (ti < cache_size)
                 {
                     if (!flag[ti])
                     {
-                        Surface_Simplification(mesh, 0.5, alfa);
+                        uv_coords[ti] = Surface_Simplification(mesh, 0.5, uv_coords[0]);
                         std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
                         std::cout << "faces : " << mesh.n_faces() << std::endl;;
                         openMesh_to_igl(mesh, V[ti], F[ti]);
@@ -251,6 +242,14 @@ int main(int argc, char* argv[])
                     }
                     viewer.data().clear();
                     viewer.data().set_mesh(V[ti], F[ti]);
+                    viewer.data().set_uv(uv_coords[ti]);
+                    Eigen::MatrixXd colors = Eigen::MatrixXd::Ones(viewer.data().V.rows(), 3);
+                    viewer.data().set_colors(colors);
+                    Eigen::Matrix<unsigned char, Eigen::Dynamic, Eigen::Dynamic> R, G, B, A;
+                    igl::png::readPNG(mtlfile.is_open() ? texture_file : igl::file_dialog_open(), R, G, B, A);
+                    viewer.data().set_texture(R, G, B, A);
+                    viewer.data().show_texture = true;
+                    viewer.data().show_lines = false;
                     viewer.core().align_camera_center(V[ti], F[ti]);
                     ti++;
                 }
@@ -278,37 +277,11 @@ int main(int argc, char* argv[])
         }
     };
 
-    // Draw additional windows
-    //menu.callback_draw_custom_window = [&]()
-    //{
-    //    // Define next window position + size
-    //    ImGui::SetNextWindowPos(ImVec2(180.f * menu.menu_scaling(), 10), ImGuiCond_FirstUseEver);
-    //    ImGui::SetNextWindowSize(ImVec2(200, 160), ImGuiCond_FirstUseEver);
-    //    ImGui::Begin(
-    //        "File Info", nullptr,
-    //        ImGuiWindowFlags_NoSavedSettings
-    //    );
-
-    //    // Expose the same variable directly ...
-    //    ImGui::PushItemWidth(-80);
-    //    ImGui::DragScalar("double", ImGuiDataType_Double, &doubleVariable, 0.1, 0, 0, "%.4f");
-    //    ImGui::PopItemWidth();
-
-    //    static std::string str = argv[1];
-    //    size_t last_dot = str.rfind('.');
-    //    size_t last_slash = str.find_last_of('\\');
-    //    std::string fnameNew = str.substr(last_slash + 1, (last_dot - last_slash - 1));
-    //    
-    //    ImGui::InputText("fname", fnameNew);
-
-    //    ImGui::End();
-    //};
+   
     
     viewer.data().set_mesh(V[0], F[0]);
-
-    // Disable wireframe
-    //viewer.data().show_lines = false;
-    //viewer.data().show_texture = true;
+    viewer.data().show_texture = true;
+    viewer.data().show_lines = false;
     viewer.launch();
 
 }

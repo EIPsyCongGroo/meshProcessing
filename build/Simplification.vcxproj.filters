@@ -18,6 +18,9 @@
     <ClInclude Include="E:\meshSiplification\Base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="E:\meshSiplification\gettexure.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="E:\meshSiplification\remesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>

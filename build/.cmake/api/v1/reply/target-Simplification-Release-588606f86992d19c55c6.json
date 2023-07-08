@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug/Simplification.exe"
+			"path" : "Release/Simplification.exe"
 		},
 		{
-			"path" : "Debug/Simplification.pdb"
+			"path" : "Release/Simplification.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -143,7 +143,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD"
 				},
 				{
 					"backtrace" : 17,
@@ -220,26 +220,30 @@
 	[
 		{
 			"backtrace" : 17,
-			"id" : "imgui::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 17,
-			"id" : "imguizmo::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 17,
 			"id" : "igl_core::@7e03116a751a0a925ea3"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 17,
+			"id" : "igl_imgui::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "imgui::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 17,
 			"id" : "glad::@f022c46af7fd79d63a94"
 		},
 		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 17,
 			"id" : "glfw::@fa9f4482d3a2b070f206"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "imguizmo::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 17,
@@ -248,10 +252,6 @@
 		{
 			"backtrace" : 17,
 			"id" : "igl_opengl::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 17,
-			"id" : "igl_imgui::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Simplification::@6890427a1f51a3e7e1df",
@@ -260,11 +260,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{
@@ -274,22 +274,22 @@
 			},
 			{
 				"backtrace" : 15,
-				"fragment" : "Debug\\imguizmo.lib",
+				"fragment" : "Release\\imguizmo.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 15,
-				"fragment" : "Debug\\imgui.lib",
+				"fragment" : "Release\\imgui.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 16,
-				"fragment" : "_deps\\glfw-build\\src\\Debug\\glfw3.lib",
+				"fragment" : "_deps\\glfw-build\\src\\Release\\glfw3.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 10,
-				"fragment" : "_deps\\glad-build\\Debug\\glad.lib",
+				"fragment" : "_deps\\glad-build\\Release\\glad.lib",
 				"role" : "libraries"
 			},
 			{
@@ -324,14 +324,15 @@
 			[
 				4,
 				5,
-				6
+				6,
+				7
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				7
+				8
 			]
 		}
 	],
@@ -364,6 +365,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Base.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "gettexure.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{

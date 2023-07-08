@@ -21,7 +21,7 @@ CMAKE_CONFIGURATION_TYPES:STRING=Debug
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=E:/meshSiplification/build/_deps/eigen-subbuild/CMakeFiles/pkgRedirects
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/eigen-populate
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/eigen-populate
 
 //No help, variable specified on the command line.
 CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe
@@ -83,9 +83,9 @@ CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community
 //Name of generator platform.
-CMAKE_GENERATOR_PLATFORM:INTERNAL=
+CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 //Name of generator toolset.
-CMAKE_GENERATOR_TOOLSET:INTERNAL=
+CMAKE_GENERATOR_TOOLSET:INTERNAL=host=x64
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=E:/meshSiplification/build/_deps/eigen-subbuild

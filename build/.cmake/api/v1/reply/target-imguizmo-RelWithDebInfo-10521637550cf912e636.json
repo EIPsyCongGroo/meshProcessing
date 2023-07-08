@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug/imguizmo.lib"
+			"path" : "RelWithDebInfo/imguizmo.lib"
 		}
 	],
 	"backtrace" : 7,
@@ -104,7 +104,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD"
 				}
 			],
 			"defines" : 
@@ -155,11 +155,11 @@
 			"id" : "imgui::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 8,
 			"id" : "glad::@f022c46af7fd79d63a94"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 8,

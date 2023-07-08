@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug/imgui.lib"
+			"path" : "MinSizeRel/imgui.lib"
 		}
 	],
 	"backtrace" : 7,
@@ -111,7 +111,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O1 /Ob1 /DNDEBUG -MD"
 				}
 			],
 			"defines" : 
@@ -161,11 +161,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 8,
 			"id" : "glad::@f022c46af7fd79d63a94"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 8,
