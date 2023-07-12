@@ -11,7 +11,7 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
     //1. Compute the Q matrices for all the initial vertices
     auto Q = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, Eigen::Matrix4d>(mesh);
     auto v = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, Eigen::Vector4d>(mesh);
-    auto flag = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, int>(mesh); //��vto_flag vfrom_flag����жϵ���Ƿ���Ч
+    auto flag = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, int>(mesh);
     auto p = OpenMesh::makeTemporaryProperty<OpenMesh::FaceHandle, Eigen::Vector4d>(mesh);
     
     for (MyMesh::FaceIter fit = mesh.faces_begin(); fit != mesh.faces_end(); ++fit)
@@ -47,6 +47,10 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
     std::priority_queue <edge_Collapse_structure, std::vector<edge_Collapse_structure>, std::less<edge_Collapse_structure>> q; //�������У�С���ѣ�
     for (MyMesh::EdgeIter eit = mesh.edges_begin(); eit != mesh.edges_end(); ++eit)
     {
+       /* if (mesh.is_boundary(eit))
+        {
+            continue;
+        }*/
         Eigen::Matrix4d newQ = Q[eit->v0()] + Q[eit->v1()];
         Eigen::Matrix4d tQ = newQ;
         Eigen::Vector4d b(0.0, 0.0, 0.0, 1.0);
@@ -103,28 +107,27 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
     int i = 0;
     while (i < it_num)
     {
-        edge_Collapse_structure s = q.top();//��ö�ͷԪ�أ���QEM��С��
+        edge_Collapse_structure s = q.top();
         q.pop();
-        //�ж��Ƿ��޸Ĺ�
+ 
         if (mesh.status(s.vfrom).deleted() || mesh.status(s.vto).deleted())
             continue;
         if (s.vto_flag != flag[s.vto] || s.vfrom_flag != flag[s.vfrom])
             continue;
         MyMesh::VertexHandle tvh;
         MyMesh::HalfedgeHandle ophf = mesh.opposite_halfedge_handle(s.hf);
-        if (mesh.is_collapse_ok(s.hf) && !mesh.is_boundary(s.hf))
+        if (mesh.is_collapse_ok(s.hf))
         {
            
             mesh.collapse(s.hf);
             tvh = s.vto;
             flag[s.vto] ++;
-            flag[s.vfrom] ++;
-               
+            flag[s.vfrom] ++;    
             
         }
 
         
-        else if (mesh.is_collapse_ok(ophf) && !mesh.is_boundary(ophf))
+        else if (mesh.is_collapse_ok(ophf))
         {
           
             mesh.collapse(ophf);

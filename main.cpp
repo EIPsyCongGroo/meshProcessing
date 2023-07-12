@@ -66,14 +66,9 @@ int main(int argc, char* argv[])
     mesh.request_vertex_texcoords2D();
     OpenMesh::IO::Options opt = OpenMesh::IO::Options::VertexTexCoord;
     std::string fname = "../models/bunny.obj";
-    if (!(argv[1]))
-    {
-        OpenMesh::IO::read_mesh(mesh, fname, opt);
-    }
-    else
-    {
-        OpenMesh::IO::read_mesh(mesh, argv[1], opt);
-    }
+
+    OpenMesh::IO::read_mesh(mesh, argc > 1 ? argv[1] : fname);
+
     for (MyMesh::VertexIter v_it = mesh.vertices_begin(); v_it != mesh.vertices_end(); ++v_it)
     {
         mesh.point(*v_it) /= 4.0;
@@ -305,10 +300,8 @@ int main(int argc, char* argv[])
     //};
     
     viewer.data().set_mesh(V[0], F[0]);
-
-    // Disable wireframe
-    //viewer.data().show_lines = false;
-    //viewer.data().show_texture = true;
+    viewer.core().background_color << 1.0, 1.0, 1.0, 1.0;
+    //viewer.data().set_colors(Eigen::RowVector3d(0.8, 0.8, 0.8));
     viewer.launch();
 
 }
