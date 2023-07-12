@@ -217,7 +217,7 @@ int main(int argc, char* argv[])
                     }
                 }*/
 
-                Eigen::MatrixXd colors = Eigen::MatrixXd::Ones(viewer.data().V.rows(), 3);
+
                 viewer.data().set_colors(Eigen::RowVector3d(1.0, 1.0, 1.0));
                 Eigen::Matrix<unsigned char, Eigen::Dynamic, Eigen::Dynamic> R, G, B, A;
                 igl::png::readPNG(mtlfile.is_open() ? texture_file:igl::file_dialog_open(), R, G, B, A);
