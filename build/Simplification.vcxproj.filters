@@ -24,6 +24,9 @@
     <ClInclude Include="E:\meshSiplification\simplify.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Patches.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\meshSiplification\CMakeLists.txt" />

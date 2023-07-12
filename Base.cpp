@@ -20,13 +20,14 @@ MyMesh igl_to_openMesh(Eigen::MatrixXd& V, Eigen::MatrixXi& F)
         face_vhandles.push_back(vhandle[1]);
         face_vhandles.push_back(vhandle[2]);
         mesh.add_face(face_vhandles);
+        
     }
     return mesh;
 
 }
 void openMesh_to_igl(MyMesh& mesh, Eigen::MatrixXd& V, Eigen::MatrixXi& F)
 {
-    //³õÊ¼»¯ÈÝÆ÷
+    //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     V.setZero(mesh.n_vertices(), 3);
     F.setZero(mesh.n_faces(), 3);
     int i = 0;
@@ -113,4 +114,89 @@ Eigen::VectorXd calc_Gaussian_Curvature(MyMesh& mesh)
         ret[v_it->idx()] = ((2 * M_PI - sum_angle) / area);
     }
     return ret;
+}
+
+double calc_sigma(MyMesh& mesh)
+{
+    double avg_edge_length = 0.0;
+    double sum_squared_diff = 0.0;
+    int num_edges = 0;
+
+    for (MyMesh::EdgeIter e_it = mesh.edges_begin(); e_it != mesh.edges_end(); ++e_it) {
+        MyMesh::EdgeHandle eh = *e_it;
+        MyMesh::HalfedgeHandle heh = mesh.halfedge_handle(eh, 0);
+        MyMesh::Point p0 = mesh.point(mesh.from_vertex_handle(heh));
+        MyMesh::Point p1 = mesh.point(mesh.to_vertex_handle(heh));
+        double edge_length = (p1 - p0).length();
+        avg_edge_length += edge_length;
+        num_edges++;
+    }
+
+    avg_edge_length /= num_edges;
+
+    for (MyMesh::EdgeIter e_it = mesh.edges_begin(); e_it != mesh.edges_end(); ++e_it) {
+        MyMesh::EdgeHandle eh = *e_it;
+        MyMesh::HalfedgeHandle heh = mesh.halfedge_handle(eh, 0);
+        MyMesh::Point p0 = mesh.point(mesh.from_vertex_handle(heh));
+        MyMesh::Point p1 = mesh.point(mesh.to_vertex_handle(heh));
+        double edge_length = (p1 - p0).length();
+        double diff = edge_length - avg_edge_length;
+        sum_squared_diff += diff * diff;
+    }
+
+    return sum_squared_diff / num_edges;
+}
+
+void mesh_filter(MyMesh& mesh, int iterations)
+{
+    auto fn = OpenMesh::makeTemporaryProperty<OpenMesh::FaceHandle, MyMesh::Point>(mesh);
+    while (iterations-- > 0)
+    {
+        //Face normal filtering
+         for (MyMesh::FaceIter fit = mesh.faces_begin(); fit != mesh.faces_end(); ++fit)
+         {
+            
+            double alfa = 0.0;
+            double beta = 0.0;
+            double thet = M_PI / 9;
+            double area = mesh.calc_face_area(*fit);
+
+            mesh.request_face_normals();
+            mesh.update_face_normals();
+            MyMesh::Point ni = mesh.normal(*fit);
+            MyMesh::Point ci = mesh.calc_face_centroid(*fit);
+            MyMesh::Point ni_new(0, 0, 0);
+            for (MyMesh::FaceFaceIter f_fit = mesh.ff_iter(*fit); f_fit.is_valid(); ++f_fit)
+            {
+                MyMesh::Point nj = mesh.normal(*f_fit);
+                if (ni.dot(nj)> cos(thet))
+                {
+                    MyMesh::Point cj = mesh.calc_face_centroid(*f_fit);
+                    alfa = exp(-(ci - cj).dot(ci - cj) / (2 * calc_sigma(mesh)));
+                    beta = exp(-pow(((1.0 - ni.dot(nj)) / (1.0 - cos(thet))), 2));
+                
+                    ni_new += area * alfa * beta * ni;
+                }
+
+                fn[*fit] = ni_new.normalized();
+                //std::cout << fn[*fit] << "\n";
+            }
+         }
+
+        //Vertex position update
+         for (MyMesh::VertexIter vit = mesh.vertices_begin(); vit != mesh.vertices_end(); ++vit)
+         {
+             MyMesh::Point vi = mesh.point(*vit);
+             MyMesh::Point delta_vi(0, 0, 0);
+             for (MyMesh::VertexFaceIter vf_it = mesh.vf_iter(*vit); vf_it.is_valid(); ++vf_it)
+             {
+                 delta_vi += (mesh.calc_face_centroid(*vf_it) - vi).dot(fn[*vf_it]) * mesh.normal(*vf_it);
+             }
+             vi += delta_vi / mesh.valence(*vit);
+             mesh.set_point(*vit, vi);
+         }
+    }
+
+    
+   
 }

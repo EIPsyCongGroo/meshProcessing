@@ -1,7 +1,10 @@
 # CMake generation dependency list for this directory.
+C:/src/vcpkg/vcpkg/installed/x64-windows/share/OpenMesh/vcpkg-cmake-wrapper.cmake
+C:/src/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake
 D:/CMake/share/cmake-3.24/Modules/CMakeCInformation.cmake
 D:/CMake/share/cmake-3.24/Modules/CMakeCXXInformation.cmake
 D:/CMake/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake
+D:/CMake/share/cmake-3.24/Modules/CMakeDependentOption.cmake
 D:/CMake/share/cmake-3.24/Modules/CMakeGenericSystem.cmake
 D:/CMake/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake
 D:/CMake/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake
@@ -24,6 +27,7 @@ D:/CMake/share/cmake-3.24/Modules/Platform/Windows-MSVC-CXX.cmake
 D:/CMake/share/cmake-3.24/Modules/Platform/Windows-MSVC.cmake
 D:/CMake/share/cmake-3.24/Modules/Platform/Windows.cmake
 D:/CMake/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake
+D:/CMake/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake
 E:/meshSiplification/CMakeLists.txt
 E:/meshSiplification/build/CMakeFiles/3.24.2/CMakeCCompiler.cmake
 E:/meshSiplification/build/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake

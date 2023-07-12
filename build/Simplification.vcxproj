@@ -24,6 +24,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{651FCF00-D45E-3CE5-BFA6-6018C49A1809}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>Simplification</ProjectName>
@@ -54,7 +55,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -86,7 +87,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "E:/meshSiplification/build/_deps/eigen-src" /external:I "E:/meshSiplification/build/_deps/libigl_imgui_fonts-src" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -105,18 +106,31 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/meshSiplification/build/Debug/Simplification.exe -installedDir C:/src/vcpkg/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>opengl32.lib;Debug\imguizmo.lib;Debug\imgui.lib;_deps\glfw-build\src\Debug\glfw3.lib;_deps\glad-build\Debug\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\src\vcpkg\vcpkg\installed\x64-windows\debug\lib\OpenMeshCored.lib;C:\src\vcpkg\vcpkg\installed\x64-windows\debug\lib\OpenMeshToolsd.lib;opengl32.lib;Debug\imguizmo.lib;Debug\imgui.lib;_deps\glfw-build\src\Debug\glfw3.lib;_deps\glad-build\Debug\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -131,7 +145,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "E:/meshSiplification/build/_deps/eigen-src" /external:I "E:/meshSiplification/build/_deps/libigl_imgui_fonts-src" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -150,18 +164,31 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/meshSiplification/build/Release/Simplification.exe -installedDir C:/src/vcpkg/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>opengl32.lib;Release\imguizmo.lib;Release\imgui.lib;_deps\glfw-build\src\Release\glfw3.lib;_deps\glad-build\Release\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\src\vcpkg\vcpkg\installed\x64-windows\lib\OpenMeshCore.lib;C:\src\vcpkg\vcpkg\installed\x64-windows\lib\OpenMeshTools.lib;opengl32.lib;Release\imguizmo.lib;Release\imgui.lib;_deps\glfw-build\src\Release\glfw3.lib;_deps\glad-build\Release\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -176,7 +203,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "E:/meshSiplification/build/_deps/eigen-src" /external:I "E:/meshSiplification/build/_deps/libigl_imgui_fonts-src" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -195,18 +222,31 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/meshSiplification/build/MinSizeRel/Simplification.exe -installedDir C:/src/vcpkg/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>opengl32.lib;MinSizeRel\imguizmo.lib;MinSizeRel\imgui.lib;_deps\glfw-build\src\MinSizeRel\glfw3.lib;_deps\glad-build\MinSizeRel\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\src\vcpkg\vcpkg\installed\x64-windows\lib\OpenMeshCore.lib;C:\src\vcpkg\vcpkg\installed\x64-windows\lib\OpenMeshTools.lib;opengl32.lib;MinSizeRel\imguizmo.lib;MinSizeRel\imgui.lib;_deps\glfw-build\src\MinSizeRel\glfw3.lib;_deps\glad-build\MinSizeRel\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -221,7 +261,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "E:/meshSiplification/build/_deps/eigen-src" /external:I "E:/meshSiplification/build/_deps/libigl_imgui_fonts-src" /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -239,18 +279,31 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;IMGUI_IMPL_OPENGL_LOADER_GLAD;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\src\vcpkg\vcpkg\installed\x64-windows\include;E:\meshSiplification\build\_deps\libigl-src\include;E:\meshSiplification\build\_deps\glad-src\include;E:\meshSiplification\build\_deps\glfw-src\include;E:\meshSiplification\build\_deps\imgui-src;E:\meshSiplification\build\_deps\imguizmo-src;E:\meshSiplification\build\_deps\eigen-src;E:\meshSiplification\build\_deps\libigl_imgui_fonts-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/src/vcpkg/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/meshSiplification/build/RelWithDebInfo/Simplification.exe -installedDir C:/src/vcpkg/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>opengl32.lib;RelWithDebInfo\imguizmo.lib;RelWithDebInfo\imgui.lib;_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;_deps\glad-build\RelWithDebInfo\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\src\vcpkg\vcpkg\installed\x64-windows\lib\OpenMeshCore.lib;C:\src\vcpkg\vcpkg\installed\x64-windows\lib\OpenMeshTools.lib;opengl32.lib;RelWithDebInfo\imguizmo.lib;RelWithDebInfo\imgui.lib;_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;_deps\glad-build\RelWithDebInfo\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -276,7 +329,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\vcpkg\vcpkg\installed\x64-windows\share\OpenMesh\vcpkg-cmake-wrapper.cmake;C:\src\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/meshSiplification/CMakeLists.txt</Message>
@@ -289,7 +342,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\src\vcpkg\vcpkg\installed\x64-windows\share\OpenMesh\vcpkg-cmake-wrapper.cmake;C:\src\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/meshSiplification/CMakeLists.txt</Message>
@@ -302,7 +355,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\src\vcpkg\vcpkg\installed\x64-windows\share\OpenMesh\vcpkg-cmake-wrapper.cmake;C:\src\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/meshSiplification/CMakeLists.txt</Message>
@@ -315,7 +368,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\src\vcpkg\vcpkg\installed\x64-windows\share\OpenMesh\vcpkg-cmake-wrapper.cmake;C:\src\vcpkg\vcpkg\scripts\buildsystems\vcpkg.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent.cmake;D:\CMake\share\cmake-3.24\Modules\FetchContent\CMakeLists.cmake.in;D:\CMake\share\cmake-3.24\Modules\FindGit.cmake;D:\CMake\share\cmake-3.24\Modules\FindOpenGL.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;D:\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;D:\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\CMake\share\cmake-3.24\Modules\SelectLibraryConfigurations.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeCXXCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeRCCompiler.cmake;E:\meshSiplification\build\CMakeFiles\3.24.2\CMakeSystem.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\igl\modules\opengl.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glad.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\glfw.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imgui.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\imguizmo.cmake;E:\meshSiplification\build\_deps\libigl-src\cmake\recipes\external\libigl_imgui_fonts.cmake;E:\meshSiplification\cmake\libigl.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\meshSiplification\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -325,6 +378,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="E:\meshSiplification\main.cpp" />
     <ClCompile Include="E:\meshSiplification\remesh.cpp" />
     <ClCompile Include="E:\meshSiplification\simplify.cpp" />
+    <ClInclude Include="..\Patches.h" />
     <ClInclude Include="E:\meshSiplification\Base.h" />
     <ClInclude Include="E:\meshSiplification\remesh.h" />
     <ClInclude Include="E:\meshSiplification\simplify.h" />

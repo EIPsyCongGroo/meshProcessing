@@ -16,7 +16,7 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
     
     for (MyMesh::FaceIter fit = mesh.faces_begin(); fit != mesh.faces_end(); ++fit)
     {
-        MyMesh::Point fn = mesh.normal(*fit).normalized();
+        MyMesh::Point fn = mesh.normal(*fit); 
         MyMesh::Point tp = mesh.point(fit->halfedge().to());
         p[*fit][0] = fn[0];
         p[*fit][1] = fn[1];
@@ -44,13 +44,15 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
     //std::cout << "caculate curvature done" << std::endl;
     // 2. Select all valid pairs (only vertices in an edge are considered)
     // 3. Compute the optimal contraction target
-    std::priority_queue <edge_Collapse_structure, std::vector<edge_Collapse_structure>, std::less<edge_Collapse_structure>> q; //�������У�С���ѣ�
+    std::priority_queue <edge_Collapse_structure, std::vector<edge_Collapse_structure>, std::less<edge_Collapse_structure>> q; 
     for (MyMesh::EdgeIter eit = mesh.edges_begin(); eit != mesh.edges_end(); ++eit)
     {
-       /* if (mesh.is_boundary(eit))
+ 
+        if (mesh.is_boundary(eit) || mesh.is_boundary(eit->v0()) || mesh.is_boundary(eit->v1()))
         {
             continue;
-        }*/
+        }
+
         Eigen::Matrix4d newQ = Q[eit->v0()] + Q[eit->v1()];
         Eigen::Matrix4d tQ = newQ;
         Eigen::Vector4d b(0.0, 0.0, 0.0, 1.0);
@@ -77,8 +79,12 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
         //std::cout << vnew << std::endl;
         edge_Collapse_structure ts;
         ts.hf = eit->halfedge(0);
- 
-        ts.cost = (vnew.transpose() * newQ * vnew);
+        /*if (mesh.is_boundary(ts.hf))
+        {
+            ts.cost = 10.0 * abs(vnew.transpose() * newQ * vnew);
+        }
+        else*/
+            ts.cost = (vnew.transpose() * newQ * vnew);
         if (ts.cost < 0)
         {
             std::cout << "Minus cost:" << ts.cost << std::endl;
@@ -116,7 +122,7 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
             continue;
         MyMesh::VertexHandle tvh;
         MyMesh::HalfedgeHandle ophf = mesh.opposite_halfedge_handle(s.hf);
-        if (mesh.is_collapse_ok(s.hf))
+        if (mesh.is_collapse_ok(s.hf) && !mesh.is_boundary(s.hf))
         {
            
             mesh.collapse(s.hf);
@@ -127,7 +133,7 @@ void Surface_Simplification(MyMesh& mesh, float ratio)
         }
 
         
-        else if (mesh.is_collapse_ok(ophf))
+        else if (mesh.is_collapse_ok(ophf) && !mesh.is_boundary(ophf))
         {
           
             mesh.collapse(ophf);

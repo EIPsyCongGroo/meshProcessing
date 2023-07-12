@@ -10,6 +10,7 @@
 #include "Base.h"
 #include "simplify.h"
 #include "remesh.h"
+#include"Patches.h"
 
 typedef OpenMesh::TriMesh_ArrayKernelT<> MyMesh;
 const int cache_size = 12;
@@ -19,6 +20,7 @@ bool flag[cache_size] = { false };
 MyMesh mesh;
 double TargetLength = 0.008;
 float alfa = 0.5;
+int index = 0;
 
 int ti = 0;
 bool key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifier)
@@ -65,14 +67,10 @@ int main(int argc, char* argv[])
 
     mesh.request_vertex_texcoords2D();
     OpenMesh::IO::Options opt = OpenMesh::IO::Options::VertexTexCoord;
-    std::string fname = "../models/bunny.obj";
+    std::string fname = "../models/arc.off";
 
     OpenMesh::IO::read_mesh(mesh, argc > 1 ? argv[1] : fname);
 
-    for (MyMesh::VertexIter v_it = mesh.vertices_begin(); v_it != mesh.vertices_end(); ++v_it)
-    {
-        mesh.point(*v_it) /= 4.0;
-    }
     mesh.update_face_normals();
     mesh.update_vertex_normals();
     igl::opengl::glfw::Viewer viewer;
@@ -172,64 +170,30 @@ int main(int argc, char* argv[])
                 }
             }
 
-            //if (ImGui::Button("CatmullClark", ImVec2(-1, 0)))
-            //{
-
-            //    OpenMesh::Subdivider::Uniform::CatmullClarkT<MyMesh> catmull;;
-
-            //    if (ti < cache_size)
-            //    {
-            //        if (!flag[ti])
-            //        {
-            //            // Execute  subdivision steps
-            //            catmull.attach(mesh);
-            //            catmull(1);
-            //            catmull.detach();
-            //            std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
-            //            std::cout << "faces : " << mesh.n_faces() << std::endl;;
-            //            openMesh_to_igl(mesh, V[ti], F[ti]);
-            //            flag[ti] = true;
-            //        }
-            //        viewer.data().clear();
-            //        viewer.data().set_mesh(V[ti], F[ti]);
-            //        viewer.core().align_camera_center(V[ti], F[ti]);
-            //        ti++;
-            //    }
-            //}
+            
 
             // Add a button
-            //if (ImGui::Button("Decimater", ImVec2(-1, 0)))
-            //{
+            if (ImGui::Button("mesh_filter", ImVec2(-1, 0)))
+            {
 
-            //    typedef OpenMesh::Decimater::DecimaterT< MyMesh >     Decimater;
-            //    typedef OpenMesh::Decimater::ModQuadricT<MyMesh>::Handle HModQuadric;
+                if (ti < cache_size)
+                {
+                    if (!flag[ti])
+                    {
 
+                        mesh_filter(mesh, 1);
 
-            //    if (ti < cache_size)
-            //    {
-            //        if (!flag[ti])
-            //        {
-
-            //            Decimater   decimater(mesh);  // a decimater object, connected to a mesh
-            //            HModQuadric hModQuadric;      // use a quadric module
-            //            decimater.add(hModQuadric); // register module at the decimater
-            //            // Execute  decimation steps
-            //            decimater.module(hModQuadric).unset_max_err();
-            //            decimater.initialize();       // let the decimater initialize the mesh and the
-            //            // modules
-            //            decimater.decimate();         // do decimation
-
-            //            std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
-            //            std::cout << "faces : " << mesh.n_faces() << std::endl;;
-            //            openMesh_to_igl(mesh, V[ti], F[ti]);
-            //            flag[ti] = true;
-            //        }
-            //        viewer.data().clear();
-            //        viewer.data().set_mesh(V[ti], F[ti]);
-            //        viewer.core().align_camera_center(V[ti], F[ti]);
-            //        ti++;
-            //    }
-            //}
+                        std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
+                        std::cout << "faces : " << mesh.n_faces() << std::endl;;
+                        openMesh_to_igl(mesh, V[ti], F[ti]);
+                        flag[ti] = true;
+                    }
+                    viewer.data().clear();
+                    viewer.data().set_mesh(V[ti], F[ti]);
+                    viewer.core().align_camera_center(V[ti], F[ti]);
+                    ti++;
+                }
+            }
 
             ImGui::InputFloat("Simplify_ratio", &alfa, 0, 0, "%.4f");
             if (ImGui::Button("Simplify", ImVec2(-1, 0)))
@@ -238,9 +202,13 @@ int main(int argc, char* argv[])
                 {
                     if (!flag[ti])
                     {
+                        auto start = std::chrono::steady_clock::now();
                         Surface_Simplification(mesh, alfa);
                         std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
                         std::cout << "faces : " << mesh.n_faces() << std::endl;;
+                        auto end = std::chrono::steady_clock::now();
+                        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+                        std::cout << "Simplify time: " << std::setprecision(3) << duration.count() / 1000.0 << " secs" << std::endl;
                         openMesh_to_igl(mesh, V[ti], F[ti]);
                         flag[ti] = true;
                     }
@@ -269,6 +237,39 @@ int main(int argc, char* argv[])
                     viewer.core().align_camera_center(V[ti], F[ti]);
                     ti++;
                 }
+            }
+            ImGui::InputInt("vertex_id", &index, 0, 0);
+            if (ImGui::Button("showVertex", ImVec2(-1, 0)))
+            {
+                Eigen::MatrixXd C;
+                if (ti < cache_size)
+                {
+                    if (!flag[ti])
+                    { 
+                        C.resize(V[0].rows(), 3);
+                        C.col(0).setConstant(0.8); 
+                        C.col(1).setConstant(0.8);
+                        C.col(2).setConstant(0.8);
+                        /*for (auto index : tables)
+                        {
+                            C.row(index) << 0.0, 1.0, 0.0;
+                        }
+                        C.row(tables[0]) << 1.0, 0.0, 0.0;*/
+                        C.row(index) << 0.0, 1.0, 0.0;
+                        std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
+                        std::cout << "faces : " << mesh.n_faces() << std::endl;;
+                        openMesh_to_igl(mesh, V[ti], F[ti]);
+                        flag[ti] = true;
+                    }
+                    viewer.data().clear();
+                    viewer.data().set_mesh(V[ti], F[ti]);
+                    viewer.data().set_colors(C);
+                    viewer.data().show_vertex_labels = true;
+                    viewer.core().align_camera_center(V[ti], F[ti]);
+                    ti++;
+                }
+                
+
             }
         }
     };
