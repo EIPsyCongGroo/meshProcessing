@@ -1,0 +1,1 @@
+主要实现了带曲率惩罚的QEM网格简化和重网格化# meshProcessing
