@@ -42,7 +42,7 @@ struct edge_Collapse_structure
 };
 
 // t is a threshold parameter
-void Surface_Simplification(MyMesh& mesh, float ratio, float alfa);
+void Surface_Simplification(MyMesh& mesh, float ratio);
 
 
 

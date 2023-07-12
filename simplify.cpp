@@ -2,23 +2,18 @@
 #include "Base.h"
 #include <queue>
 #include<iostream>
-void Surface_Simplification(MyMesh& mesh, float ratio, float alfa)
+void Surface_Simplification(MyMesh& mesh, float ratio)
 {
     assert(ratio >= 0 && ratio <= 1);
     int it_num = (1.0f - ratio) * mesh.n_vertices();
-    if (alfa <= 0)
-    {
-        std::cerr<<"please ensure curture weight > 0 " << std::endl;
-    };
+
  
     //1. Compute the Q matrices for all the initial vertices
     auto Q = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, Eigen::Matrix4d>(mesh);
     auto v = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, Eigen::Vector4d>(mesh);
     auto flag = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, int>(mesh); //��vto_flag vfrom_flag����жϵ���Ƿ���Ч
     auto p = OpenMesh::makeTemporaryProperty<OpenMesh::FaceHandle, Eigen::Vector4d>(mesh);
-    auto K = OpenMesh::makeTemporaryProperty<OpenMesh::VertexHandle, float>(mesh);
-    /*Eigen::VectorXd Kvector = calc_Gaussian_Curvature(mesh);
-    std::cout << "curvature:" << Kvector << std::endl;*/
+    
     for (MyMesh::FaceIter fit = mesh.faces_begin(); fit != mesh.faces_end(); ++fit)
     {
         MyMesh::Point fn = mesh.normal(*fit).normalized();
@@ -44,8 +39,7 @@ void Surface_Simplification(MyMesh& mesh, float ratio, float alfa)
         v[*vit][2] = mesh.point(*vit)[2];
         v[*vit][3] = 1.0;
         flag[*vit] = 0;
-        K[*vit] = calc_Gaussian_Curvature(*vit, mesh);
-        //std::cout << "curvature:" << K[*vit] << std::endl;
+        
     }
     //std::cout << "caculate curvature done" << std::endl;
     // 2. Select all valid pairs (only vertices in an edge are considered)
@@ -79,28 +73,22 @@ void Surface_Simplification(MyMesh& mesh, float ratio, float alfa)
         //std::cout << vnew << std::endl;
         edge_Collapse_structure ts;
         ts.hf = eit->halfedge(0);
-        /*if (ts.isInedge(vnew, v[eit->v0()], v[eit->v1()]))
-        {*/
-            ts.k = K[mesh.from_vertex_handle(mesh.next_halfedge_handle(ts.hf))];
-            ts.cost = (vnew.transpose() * newQ * vnew);
-            if (ts.cost < 0)
-            {
-                std::cout << "Minus cost:" << ts.cost << std::endl;
-                //std::cout << "vnew:" << vnew << std::endl;
-                //std::cout << "newQ:" << newQ << std::endl;
-            }
-           // std::cout << "Original cost:" << ts.cost << std::endl;
-           ts.cost *= (1 - exp((-alfa) * ts.k));
-            //std::cout << "first cost:" << ts.cost << std::endl;
-            MyMesh::Point np(vnew[0], vnew[1], vnew[2]);
-            ts.np = np;
-            ts.vto = eit->halfedge(0).to();
-            ts.vfrom = eit->halfedge(0).from();
-            ts.Q_new = newQ;
-            q.push(ts);
-            //std::cout << "add vnew:" << np << std::endl;
-        //}
-        
+ 
+        ts.cost = (vnew.transpose() * newQ * vnew);
+        if (ts.cost < 0)
+        {
+            std::cout << "Minus cost:" << ts.cost << std::endl;
+            //std::cout << "vnew:" << vnew << std::endl;
+            //std::cout << "newQ:" << newQ << std::endl;
+        }
+           
+        MyMesh::Point np(vnew[0], vnew[1], vnew[2]);
+        ts.np = np;
+        ts.vto = eit->halfedge(0).to();
+        ts.vfrom = eit->halfedge(0).from();
+        ts.Q_new = newQ;
+        q.push(ts);
+           
     }
     mesh.request_vertex_status();
     mesh.request_halfedge_normals();
@@ -126,37 +114,24 @@ void Surface_Simplification(MyMesh& mesh, float ratio, float alfa)
         MyMesh::HalfedgeHandle ophf = mesh.opposite_halfedge_handle(s.hf);
         if (mesh.is_collapse_ok(s.hf) && !mesh.is_boundary(s.hf))
         {
-            /*if (!s.isDegenerate(s.hf, mesh))
-            {
-                if (mesh.normal(s.hf).dot(mesh.normal(mesh.face_handle(s.hf))) < 1.0E-9)
-               {*/
-                    mesh.collapse(s.hf);
-                    tvh = s.vto;
-                    flag[s.vto] ++;
-                    flag[s.vfrom] ++;
-                    //std::cout << "collapsing ..." << std::endl;
-              /* }
-                
-            }*/
+           
+            mesh.collapse(s.hf);
+            tvh = s.vto;
+            flag[s.vto] ++;
+            flag[s.vfrom] ++;
+               
             
         }
 
         
         else if (mesh.is_collapse_ok(ophf) && !mesh.is_boundary(ophf))
         {
-           /* if (!s.isDegenerate(ophf, mesh))
-            {
-                if (mesh.normal(ophf).dot(mesh.normal(mesh.face_handle(ophf))) < 1.0E-9)
-                {*/
-                    mesh.collapse(ophf);
-                    tvh = s.vto;
-                    flag[s.vto] ++;
-                    flag[s.vfrom] ++;
+          
+            mesh.collapse(ophf);
+            tvh = s.vto;
+            flag[s.vto] ++;
+            flag[s.vfrom] ++;
 
-                    //std::cout << "collapsing ..." << std::endl;
-              /*  }
-                
-            }*/
         }
         else
         {
@@ -194,12 +169,7 @@ void Surface_Simplification(MyMesh& mesh, float ratio, float alfa)
             //std::cout << vnew << std::endl;
             edge_Collapse_structure ts;
             ts.hf = *vh_it;
-            ts.k = calc_Gaussian_Curvature(mesh.from_vertex_handle(mesh.next_halfedge_handle(ts.hf)), mesh);
-            //std::cout << "update curvature:" << ts.k << std::endl;
             ts.cost = (vnew.transpose() * newQ * vnew);
-            //std::cout << "update cost:" << ts.cost << std::endl;
-            ts.cost *= (1 - exp((-alfa) * ts.k));
-            //std::cout << "update cost:" << ts.cost << std::endl;
             MyMesh::Point np(vnew[0], vnew[1], vnew[2]);
             ts.np = np;
             ts.vto = tt;           

@@ -18,7 +18,7 @@ Eigen::MatrixXi F[cache_size];
 bool flag[cache_size] = { false };
 MyMesh mesh;
 double TargetLength = 0.008;
-float alfa = 0.1;
+float alfa = 0.5;
 
 int ti = 0;
 bool key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifier)
@@ -29,7 +29,7 @@ bool key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifier
         {
             if (!flag[ti])
             {
-                Surface_Simplification(mesh, 0.5, alfa);
+                Surface_Simplification(mesh, alfa);
                 std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
                 std::cout << "faces : " << mesh.n_faces() << std::endl;;
                 openMesh_to_igl(mesh, V[ti], F[ti]);
@@ -236,14 +236,14 @@ int main(int argc, char* argv[])
             //    }
             //}
 
-            ImGui::InputFloat("Curvature weight", &alfa, 0, 0, "%.4f");
+            ImGui::InputFloat("Simplify_ratio", &alfa, 0, 0, "%.4f");
             if (ImGui::Button("Simplify", ImVec2(-1, 0)))
             {
                 if (ti < cache_size)
                 {
                     if (!flag[ti])
                     {
-                        Surface_Simplification(mesh, 0.5, alfa);
+                        Surface_Simplification(mesh, alfa);
                         std::cout << "vertices : " << mesh.n_vertices() << std::endl;;
                         std::cout << "faces : " << mesh.n_faces() << std::endl;;
                         openMesh_to_igl(mesh, V[ti], F[ti]);
