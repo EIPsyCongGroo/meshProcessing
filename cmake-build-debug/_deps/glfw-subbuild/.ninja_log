@@ -1,0 +1,21 @@
+# ninja log v5
+1	122	7174189094196628	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-mkdir	e32638f22e9859ee
+1	122	7174189094196628	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-mkdir	e32638f22e9859ee
+128	7711	7174189170166553	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-download	d8f0c97d8e8b3788
+128	7711	7174189170166553	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-download	d8f0c97d8e8b3788
+7711	7842	0	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update	d56666cb7a02811d
+7711	7842	0	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update	d56666cb7a02811d
+7846	7908	7174189172168417	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-patch	2ac7198dfd953ef3
+7846	7908	7174189172168417	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-patch	2ac7198dfd953ef3
+7908	7975	7174189172811989	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-configure	3e946b0a0ee43877
+7908	7975	7174189172811989	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-configure	3e946b0a0ee43877
+7975	8026	7174189173349906	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-build	f00f34bfb425fb98
+7975	8026	7174189173349906	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-build	f00f34bfb425fb98
+8026	8080	7174189173888460	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-install	68d62d7faba04e46
+8026	8080	7174189173888460	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-install	68d62d7faba04e46
+8080	8143	7174189174509297	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-test	3eb74c6bb134209f
+8080	8143	7174189174509297	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-test	3eb74c6bb134209f
+8143	8240	7174189175481769	CMakeFiles/glfw-populate-complete	6a49770f187215ca
+8143	8240	7174189175481769	glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-done	6a49770f187215ca
+8143	8240	7174189175481769	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/CMakeFiles/glfw-populate-complete	6a49770f187215ca
+8143	8240	7174189175481769	E:/meshSiplification/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-done	6a49770f187215ca

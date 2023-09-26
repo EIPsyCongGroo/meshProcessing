@@ -1,0 +1,21 @@
+# ninja log v5
+0	108	7174189668794136	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-mkdir	9d03f990de018a4
+0	108	7174189668794136	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-mkdir	9d03f990de018a4
+109	3817	7174189705902995	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-download	ffec9d543b29da2e
+109	3817	7174189705902995	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-download	ffec9d543b29da2e
+3817	3949	0	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-update	a0da77a4a88564fa
+3817	3949	0	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-update	a0da77a4a88564fa
+3949	4019	7174189707910580	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-patch	314bf36260450380
+3949	4019	7174189707910580	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-patch	314bf36260450380
+4020	4183	7174189709520204	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-configure	67b365116eae7180
+4020	4183	7174189709520204	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-configure	67b365116eae7180
+4184	4274	7174189710457347	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-build	e293f78dd8df147f
+4184	4274	7174189710457347	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-build	e293f78dd8df147f
+4274	4332	7174189711044974	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-install	c9c652eaa0ecb581
+4274	4332	7174189711044974	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-install	c9c652eaa0ecb581
+4332	4384	7174189711565492	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-test	24a68a0196071c57
+4332	4384	7174189711565492	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-test	24a68a0196071c57
+4384	4452	7174189712247917	CMakeFiles/imguizmo-populate-complete	d878a5779ca4d497
+4384	4452	7174189712247917	imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-done	d878a5779ca4d497
+4384	4452	7174189712247917	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/CMakeFiles/imguizmo-populate-complete	d878a5779ca4d497
+4384	4452	7174189712247917	E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-done	d878a5779ca4d497

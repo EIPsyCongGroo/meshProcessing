@@ -1,0 +1,38 @@
+"D:\JetBrains\CLion 2023.1.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/JetBrains/CLion 2023.1.2/bin/ninja/win/x64/ninja.exe" "-DCMAKE_C_COMPILER=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe" "-DCMAKE_CXX_COMPILER=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe" -G Ninja -S E:\meshSiplification -B E:\meshSiplification\cmake-build-debug
+-- The C compiler identification is MSVC 19.37.32822.0
+-- The CXX compiler identification is MSVC 19.37.32822.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Creating target: igl::core (igl_core)
+-- Third-party: creating target 'Eigen3::Eigen'
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE  
+-- Forcing include of libigl module: glfw
+-- Creating target: igl::glfw (igl_glfw)
+-- Third-party: creating target 'glfw::glfw'
+-- Using Win32 for window creation
+-- Forcing include of libigl module: opengl
+-- Creating target: igl::opengl (igl_opengl)
+-- Third-party: creating target 'glad::glad'
+-- Found OpenGL: opengl32  found components: OpenGL 
+-- Forcing include of libigl module: imgui
+-- Creating target: igl::imgui (igl_imgui)
+-- Third-party: creating target 'imgui::imgui'
+-- Third-party: creating target 'imguizmo::imguizmo'
+-- Third-party: creating target 'igl::imgui_fonts'
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/meshSiplification/cmake-build-debug

@@ -1,0 +1,21 @@
+# ninja log v5
+0	56	7174189714254713	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-mkdir	80000d13a591aed8
+0	56	7174189714254713	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-mkdir	80000d13a591aed8
+56	2995	7174189743637325	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-download	90d88d42d043c6ed
+56	2995	7174189743637325	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-download	90d88d42d043c6ed
+2996	3102	0	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-update	256d4fbd16dd814c
+2996	3102	0	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-update	256d4fbd16dd814c
+3102	3148	7174189745178255	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-patch	bf92c5f6e0411bbe
+3102	3148	7174189745178255	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-patch	bf92c5f6e0411bbe
+3148	3191	7174189745597180	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-configure	bd10d22a5f723f4b
+3148	3191	7174189745597180	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-configure	bd10d22a5f723f4b
+3191	3235	7174189746045944	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-build	3efad0746efb6f0d
+3191	3235	7174189746045944	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-build	3efad0746efb6f0d
+3235	3281	7174189746509952	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-install	46e8b076b69ef916
+3235	3281	7174189746509952	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-install	46e8b076b69ef916
+3281	3323	7174189746931412	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-test	62997e57b0afbc21
+3281	3323	7174189746931412	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-test	62997e57b0afbc21
+3323	3384	7174189747538516	CMakeFiles/libigl_imgui_fonts-populate-complete	1fd5737d9553b4b0
+3323	3384	7174189747538516	libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-done	1fd5737d9553b4b0
+3323	3384	7174189747538516	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/CMakeFiles/libigl_imgui_fonts-populate-complete	1fd5737d9553b4b0
+3323	3384	7174189747538516	E:/meshSiplification/cmake-build-debug/_deps/libigl_imgui_fonts-subbuild/libigl_imgui_fonts-populate-prefix/src/libigl_imgui_fonts-populate-stamp/libigl_imgui_fonts-populate-done	1fd5737d9553b4b0

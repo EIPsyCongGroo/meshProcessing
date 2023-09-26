@@ -1,0 +1,21 @@
+# ninja log v5
+0	61	7174188826720699	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-mkdir	a0012a1facea78a4
+0	61	7174188826720699	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-mkdir	a0012a1facea78a4
+61	11044	7174188936526749	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-download	5a49c0372eaad0e4
+61	11044	7174188936526749	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-download	5a49c0372eaad0e4
+11044	11243	0	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-update	5fd85444e163a34d
+11044	11243	0	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-update	5fd85444e163a34d
+11246	11376	7174188939814121	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-patch	d9b26e98b87aa5e2
+11246	11376	7174188939814121	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-patch	d9b26e98b87aa5e2
+11376	11502	7174188941040229	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-configure	55f8d2a00767f3a8
+11376	11502	7174188941040229	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-configure	55f8d2a00767f3a8
+11502	11597	7174188942078043	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-build	63dce7055d011a02
+11502	11597	7174188942078043	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-build	63dce7055d011a02
+11597	11668	7174188942777690	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-install	b7084c547f086844
+11597	11668	7174188942777690	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-install	b7084c547f086844
+11668	11760	7174188943697817	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-test	3e713ceb907cd6b8
+11668	11760	7174188943697817	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-test	3e713ceb907cd6b8
+11760	11873	7174188944807768	CMakeFiles/libigl-populate-complete	f6ee2692f28829ab
+11760	11873	7174188944807768	libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-done	f6ee2692f28829ab
+11760	11873	7174188944807768	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/CMakeFiles/libigl-populate-complete	f6ee2692f28829ab
+11760	11873	7174188944807768	E:/meshSiplification/cmake-build-debug/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/libigl-populate-done	f6ee2692f28829ab

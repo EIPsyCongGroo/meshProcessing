@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/CMakeFiles/imguizmo-populate"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/CMakeFiles/imguizmo-populate.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/CMakeFiles/imguizmo-populate-complete.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-build.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-configure.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-download.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-install.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-mkdir.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-patch.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-test.rule"
+		},
+		{
+			"file" : "E:/meshSiplification/cmake-build-debug/_deps/imguizmo-subbuild/imguizmo-populate-prefix/src/imguizmo-populate-stamp/imguizmo-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"imguizmo-populate"
+		],
+		"name" : "imguizmo-populate"
+	}
+}
